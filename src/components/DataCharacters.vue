@@ -1,13 +1,16 @@
 <template>
-    <div>
-     <h3>Hello this is datacharacters.vue</h3>
+    <div class="container">
 
-     <ul>
-      <li v-for="character in characters" :key="character.id">
-        <router-link :to="{name: 'singlecharacter', params: {id: character.id}}">{{ character.name }}</router-link>
-      
-      </li>
-     </ul>
+      <div class="container-item">
+
+      <div class="item" v-for="character in characters" :key="character.id">
+        <h3>{{ character.name }}</h3>
+        <router-link :to="{name: 'singlecharacter', params: {id: character.id}}">
+          {{character.name}}
+        </router-link>
+      </div>
+
+     </div> <!--container-->
     </div>
 </template>
 
@@ -50,5 +53,22 @@ import  {public_key}  from '../datacharacters';
   
   </script>
 
-  <style>
+  <style lang="css">
+    .container {
+      display: flex;
+      justify-content: center;
+
+    }
+    .container-item {
+      width: 60%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    .item {
+      text-align: center;
+      background-color: grey;
+      height: 200px;
+    }
+    
   </style>

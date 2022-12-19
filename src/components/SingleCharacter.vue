@@ -9,6 +9,7 @@
             {{ char.description }}
         </li>
     </ul>
+    <img :src="url" alt="">
 
     </div>
 </template>
@@ -23,6 +24,8 @@ import {public_key} from '../datacharacters'
     data() {
         return {
             character: [],
+            url: '',
+            sizeOfImage: 'standard_large.jpg'
         }
     },
 
@@ -41,6 +44,9 @@ import {public_key} from '../datacharacters'
                 result.data.results.forEach((item) => {
                 
                     this.character.push(item)
+
+                    this.url = `${item.thumbnail.path}/${this.sizeOfImage}`
+                    console.log(this.url)
                 })
             })
             .catch((error) => {
