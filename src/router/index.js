@@ -10,6 +10,11 @@ const routes = [
     name: 'home',
     component: Home
   },
+  {
+    path: 'singlecharacter/:id',
+    name: 'singlecharacter',
+    component: () => import('../components/SingleCharacter.vue')
+  }
   
 ]
 

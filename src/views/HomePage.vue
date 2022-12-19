@@ -9,12 +9,11 @@
 
 import DataCharacters from '../components/DataCharacters.vue';
 
-
 export default {
   name: 'HomePage',
   components: {
-    DataCharacters
-  },
+    DataCharacters,
+},
 
  
   
