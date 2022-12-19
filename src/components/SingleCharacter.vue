@@ -1,6 +1,5 @@
 <template>
     <div class="singlechar">
-    <h3>hello this is singlecharacter.vue</h3>
     <p>{{ this.$route.params.id }}</p>
 
     <ul>
@@ -67,6 +66,9 @@ import {public_key} from '../datacharacters'
     .singlechar p {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .singlechar img {
+        margin-top: 20px;
     }
     
   </style>

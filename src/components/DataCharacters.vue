@@ -6,7 +6,7 @@
       <div class="item" v-for="character in characters" :key="character.id">
         <h3>{{ character.name }}</h3>
         <router-link :to="{name: 'singlecharacter', params: {id: character.id}}">
-          {{character.name}}
+          <a class="item-link" href="">Click to view more!</a>
         </router-link>
       </div>
 
@@ -57,18 +57,23 @@ import  {public_key}  from '../datacharacters';
     .container {
       display: flex;
       justify-content: center;
-
     }
     .container-item {
-      width: 60%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 15px;
+      margin-top: 50px;
     }
     .item {
       text-align: center;
       background-color: grey;
       height: 200px;
+    }
+    .item-link {
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      margin-top: 50px;
     }
     
   </style>

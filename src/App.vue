@@ -8,9 +8,12 @@
 <style>
 #app {
   padding: 30px;
-  padding-top:40px
+  padding-top:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 nav {
   padding: 30px;
 }
