@@ -13,9 +13,10 @@
 
   <script>
 
-// import { response } from 'express';
+
 import  {public_key}  from '../datacharacters';
 
+// using props we need add character to our render
   export default {
     name: 'DataCharacters',
 
