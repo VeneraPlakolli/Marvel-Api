@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-link to="/">Home</router-link>
+    <router-link to="/"><p class="home-text">Home</p></router-link>
     <router-view/>
   </div>
 </template>
@@ -26,4 +26,13 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+.home-text {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+.home-text:hover {
+  color: rgb(163, 152, 152);
+}
+
 </style>
