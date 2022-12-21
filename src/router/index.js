@@ -19,6 +19,11 @@ const routes = [
     path: '/comics',
     name: 'comicsmovies',
     component: () => import('../components/ComicsMovies.vue')
+  },
+  {
+    path: 'modalwindow/:id',
+    name: 'modalwindow',
+    component: () => import('../components/ModalWindow.vue')
   }
 ]
 
