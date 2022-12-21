@@ -2,16 +2,19 @@
     <div class="container">
       <input type="text" placeholder="Search for a movie" class="input-filter" v-model="searchValue"/>
       <div class="container-item">
-        
       <div class="item" v-for="character in filterMovies" :key="character.id">
+        <img src="../assets/marvel.jpg" alt="">
         <h3>{{ character.name }}</h3>
         <router-link :to="{name: 'singlecharacter', params: {id: character.id}}">
-          <div class="item-link"><a href="" >Click to view more!</a></div>
+          <div class="item-link">
+            
+            <a href="" >Click to view more!</a>
+          </div>
         </router-link>
       </div>
 
-     </div> <!--container-->
-    </div>
+     </div> 
+    </div>  <!--container-->
 </template>
 
   <script>
@@ -81,19 +84,32 @@ import  {public_key}  from '../datacharacters';
       margin-top: 50px;
       width: 100%;
     }
+    .container-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .item {
       text-align: center;
-      background: url('../assets/marvel.jpg') no-repeat center;
+      /* background: url('../assets/marvel.jpg') no-repeat center; */
       height: 400px;
       position: relative;
       border: solid 5px grey;
     }
+    .item-name {
+      position: absolute;
+      top: 10%;
+      right: 20%;
+    }
     .item h3 {
-      font-size: 30px;
-      margin-top: 100px;
+      font-size: 25px;
       color: #0fbd6e;
       font-weight: 800;
       background-color: wheat;
+      position: absolute;
+      top: 35%;
+      right: 0;
+      width: 100%;
     }
     .item-link {
       position: absolute;

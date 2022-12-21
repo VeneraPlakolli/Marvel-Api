@@ -14,8 +14,12 @@ const routes = [
     path: 'singlecharacter/:id',
     name: 'singlecharacter',
     component: () => import('../components/SingleCharacter.vue')
+  },
+  {
+    path: '/comics',
+    name: 'comicsmovies',
+    component: () => import('../components/ComicsMovies.vue')
   }
-  
 ]
 
 const router = new VueRouter({
