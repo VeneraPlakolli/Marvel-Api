@@ -126,6 +126,23 @@ import  {public_key}  from '../datacharacters';
       color: black;
     }
     
+    @media (min-width:768px) and (max-width:1024px) {
+    .container-item {
+        grid-template-columns: 1fr 1fr;
+    }
+    .container {
+      width: 100%;
+    }
+  }
+
+  @media (max-width:767px) {
+    .container-item {
+        grid-template-columns: 1fr;
+    }
+    .container {
+      width: 100%;
+    }
+  }
     
     
   </style>
