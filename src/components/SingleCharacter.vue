@@ -1,11 +1,11 @@
 <template>
     <div class="singlechar">
-    <p>{{ this.$route.params.id }}</p>
+    <p class="id-single">{{ this.$route.params.id }}</p>
 
     <ul>
         <li v-for="char in character" :key="char.id">
-            {{ char.name }}
-            {{ char.description }}
+           <p class="name-single">{{ char.name }}</p>
+           <p class="description-single">{{ char.description }}</p>
         </li>
     </ul>
     <img :src="url" alt="">
@@ -60,6 +60,20 @@ import {public_key} from '../datacharacters'
   </script>
 
   <style>
+ 
+  
+  .id-single {
+    font-size: 25px;
+  }
+  .name-single {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .description-single {
+    font-size: 20px;
+  }
+  
     .singlechar {
         padding: 20px;
     }
@@ -70,5 +84,7 @@ import {public_key} from '../datacharacters'
     .singlechar img {
         margin-top: 20px;
     }
-    
+    /* body {
+        font-size: 20px;
+    } */
   </style>

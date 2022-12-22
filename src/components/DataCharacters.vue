@@ -67,6 +67,7 @@ import  {public_key}  from '../datacharacters';
   </script>
 
   <style lang="css">
+  
     .container {
       display: flex;
       justify-content: center;

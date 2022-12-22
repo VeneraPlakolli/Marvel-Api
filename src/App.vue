@@ -21,6 +21,9 @@
   display: flex;
 
 }
+body {
+    background-color: burlywood;
+  }
 .nav p {
   margin-left: 5px;
   margin-right: 5px;
